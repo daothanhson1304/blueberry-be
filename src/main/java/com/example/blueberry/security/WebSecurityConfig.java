@@ -58,6 +58,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and();
         http.authorizeRequests().antMatchers("/api/auth/**").permitAll();
         http.authorizeRequests().antMatchers("/api/product/**").permitAll();
+        http.authorizeRequests().antMatchers("/api/twillio/**").permitAll();
         http.authorizeRequests().antMatchers("/api/invoice/**").permitAll();
         http.authorizeRequests().antMatchers("/api/user/**").hasAnyAuthority("ROLE_ADMIN");
         http.authorizeRequests().antMatchers("/api/test/**").hasAnyAuthority("ROLE_USER");

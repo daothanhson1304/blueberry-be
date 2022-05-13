@@ -11,8 +11,9 @@ public class InvoiceResponse {
     private Integer status;
     private String productTitle;
     private String productDes;
+    private long createAt;
 
-    public InvoiceResponse(Integer id,Integer userId, Integer productId, String productImage, Integer quantity, Integer totalPrice, Integer status, String productTitle, String productDes) {
+    public InvoiceResponse(Integer id,Integer userId, Integer productId, String productImage, Integer quantity, Integer totalPrice, Integer status, String productTitle, String productDes,long createAt) {
         this.userId = userId;
         this.productId = productId;
         this.productImage = productImage;
@@ -22,6 +23,15 @@ public class InvoiceResponse {
         this.productTitle = productTitle;
         this.productDes = productDes;
         this.id=id;
+        this.createAt=createAt;
+    }
+
+    public long getCreateAt() {
+        return createAt;
+    }
+
+    public void setCreateAt(long createAt) {
+        this.createAt = createAt;
     }
 
     public Integer getId() {
